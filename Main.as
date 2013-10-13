@@ -146,7 +146,7 @@
 			if (e.buttonDown && mButton && isPressed(CTRL)) {
 				mapClick(null,2);
 			}
-			else if (e.buttonDown && mButton) {	//if left button clicked
+			else if (e.buttonDown && mButton && !isPressed(CTRL)) {	//if left button clicked
 				moveCnt++;	//boundBox spawn buffer
 				if (moveCnt > 3) {	//wait until the mouse has been moved at least 5 units
 					if (boundBox) {	//if boundbox hasn't yet been initialized, ignore the .isActive attribute
